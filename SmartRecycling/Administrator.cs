@@ -23,34 +23,34 @@ namespace SmartRecycling
         public virtual string MaterialType { get; set; }
         public virtual double MaterialWeight { get; set; }
 
-
+        //Calculating of points in our system
         public double CalcPoints()
         {
             double points = 0;
 
             if (MaterialType == "Glass")
             {
-                points = MaterialWeight * 5;
+                points = MaterialWeight * 15;
 
             }
             else if (MaterialType == "Paper")
             {
-                points = MaterialWeight * 3;
+                points = MaterialWeight * 10;
 
             }
             else if (MaterialType == "Metal")
             {
-                points = MaterialWeight * 6;
+                points = MaterialWeight * 25;
 
             }
             else if (MaterialType == "Plastic")
             {
-                points = MaterialWeight * 7;
+                points = MaterialWeight * 20;
 
             }
             else if (MaterialType == "Organic")
             {
-                points = MaterialWeight * 2;
+                points = MaterialWeight * 5;
             }
 
             return points;
