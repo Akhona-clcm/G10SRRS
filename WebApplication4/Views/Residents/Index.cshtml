@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApplication4.Models.Residents>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.material.Material_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resident_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resident_Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resident_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resident_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resident_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material_Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RewardPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferralCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferredBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Community_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.material.Material_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resident_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resident_Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resident_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resident_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resident_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Material_Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RewardPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferralCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferredBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Community_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Resident_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Resident_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Resident_ID })
+        </td>
+    </tr>
+}
+
+</table>

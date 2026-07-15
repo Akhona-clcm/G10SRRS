@@ -13,7 +13,7 @@ namespace SmartRecycling
 
         }
 
-        public virtual DbSet<Resident> Resident { get; set; }
-        public virtual DbSet<CollectionOfficer> CollectionOfficer { get; set; }
+        public DbSet<Resident> resident { get; set; }
+        public DbSet<CommunityResidentsDBContext> CommunityRes { get; set; }
     }
 }

@@ -23,15 +23,15 @@ namespace SmartRecycling
 
         //Foreign Key
         public Resident Residents { get; set; }
-        public virtual int ResidentID {get; set;}
+        public int ResidentID {get; set;}
 
         //To match the CollectionOfficer to the Residents dropoff points
         public string GetDropOffPoint()
         {
-            CommunityResidentsDBContext db = new CommunityResidentsDBContext();
-            var dropoff = (from d in db.Resident
-                           where d.ResidentID == ResidentID
-                           select d.DropOffPoint).Single();
+            CommunityResidentsDBContext DB = new CommunityResidentsDBContext();
+            var dropoff = (from D in DB.Resident
+                           where D.ResidentID == ResidentID
+                           select D.DropOffPoint).Single();
 
             return dropoff;
         }
